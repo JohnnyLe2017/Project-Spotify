@@ -1,5 +1,9 @@
 <?php
 
+echo "Hello World!!";
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -28,4 +32,4 @@
 
 </html>
 
-?>
+
