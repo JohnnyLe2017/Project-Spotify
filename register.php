@@ -1,8 +1,10 @@
 <?php
-include("includes/classes/Account.php");
-include("includes/handlers/register-handler.php");
-include("includes/handlers/login-handler.php");
+	include("includes/classes/Account.php");
 
+	$account = new Account();
+
+	include("includes/handlers/register-handler.php");
+	include("includes/handlers/login-handler.php");
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +31,9 @@ include("includes/handlers/login-handler.php");
             </p>
             <button type="submit" name="loginButton">Log In</button>
         </form>
-		
+
+
+
 		<form action="register.php" id="registerForm" method="POST">
             <h2>Create your free account</h2>
             <p>
