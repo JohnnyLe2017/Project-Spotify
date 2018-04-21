@@ -1,5 +1,6 @@
 <?php
 	include("includes/classes/Account.php");
+	include("includes/classes/Constants.php");
 
 	$account = new Account();
 
@@ -37,23 +38,23 @@
 		<form action="register.php" id="registerForm" method="POST">
             <h2>Create your free account</h2>
             <p>
-								<?php echo $account->getError("Your username must be between 5 and 25 characters"); ?>
+								<?php echo $account->getError(Constants::$usernameCharacters); ?>
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" placeholder="User Name" required>
             </p>
             <p>
-								<?php echo $account->getError("Your first name must be between 2 and 25 characters"); ?>
+								<?php echo $account->getError(Constants::$firstNameCharacters); ?>
                 <label for="firstName">First Name</label>
                 <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
             </p>
             <p>
-								<?php echo $account->getError("Your last name must be between 2 and 25 characters"); ?>
+								<?php echo $account->getError(Constants::$lastNameCharacters); ?>
                 <label for="lastName">Last Name</label>
                 <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
             </p>
             <p>
-							<?php echo $account->getError("Your emails don't match"); ?>
-							<?php echo $account->getError("Email is invalid"); ?>
+							<?php echo $account->getError(Constants::$emailsDoNotMatch); ?>
+							<?php echo $account->getError(Constants::$emailInvalid); ?>
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Email" required>
             </p>
@@ -63,6 +64,9 @@
             </p>
 
             <p>
+							<?php echo $account->getError(Constants::$passwordsDoNotMatch); ?>
+							<?php echo $account->getError(Constants::$passwordNotAlphanumeric); ?>
+							<?php echo $account->getError(Constants::$passwordCharacters); ?>
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter password" required>
             </p>
