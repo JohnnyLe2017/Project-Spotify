@@ -13,6 +13,21 @@
 			$this->validateLastName($ln);
 			$this->validateEmails($em, $em2);
 			$this->validatePasswords($pw, $pw2);
+
+			if(empty($this->errorArray) == true) {
+				//Insert into db
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+		// Checks if error exists in errorArray
+		public function getError() {
+			if(!in_array($error, $this->errorArray)) {
+				$error = "";
+			}
+			return "<span class='errorMessage'>$error</span>";
 		}
 
 		private function validateUsername($un) {
