@@ -10,8 +10,8 @@ function sanitizeFormUsername($inputText){
 }
 
 function sanitizeFormString($inputText){
-	$inputText = strip_tags($inputText); 
-	$inputText = str_replace(" ", "", $inputText); 
+	$inputText = strip_tags($inputText);
+	$inputText = str_replace(" ", "", $inputText);
 	$inputText = ucfirst(strtolower($inputText)); // Uppercases first name
 	return $inputText;
 }
@@ -31,7 +31,11 @@ if(isset($_POST['registerButton'])) {
 	$password  = sanitizeFormPassword($_POST['password']);
 	$passwor2  = sanitizeFormPassword($_POST['password2']);
 
-	$account->register($username, $firstName, $lastName, $email, $email2, $password, $password2);
+	$wasSuccessful = $account->register($username, $firstName, $lastName, $email, $email2, $password, $password2);
+
+	if($wasSuccessful == true) {
+		header("Location: index.php");
+	}
 }
 
 ?>
