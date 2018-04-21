@@ -40,27 +40,27 @@
             <p>
 								<?php echo $account->getError(Constants::$usernameCharacters); ?>
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="User Name" required>
+                <input type="text" id="username" name="username" placeholder="User Name" value="<?php getInputValue('username') ?>" required>
             </p>
             <p>
 								<?php echo $account->getError(Constants::$firstNameCharacters); ?>
                 <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" value="<?php getInputValue('firstName') ?>" required>
             </p>
             <p>
 								<?php echo $account->getError(Constants::$lastNameCharacters); ?>
                 <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" value="<?php getInputValue('lastName') ?>" required>
             </p>
             <p>
 							<?php echo $account->getError(Constants::$emailsDoNotMatch); ?>
 							<?php echo $account->getError(Constants::$emailInvalid); ?>
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="email" id="email" name="email" placeholder="Email" value="<?php getInputValue('email') ?> required>
             </p>
             <p>
                 <label for="email2">Confirm email</label>
-                <input type="email" id="email2" name="email2" placeholder="Confirm email" required>
+                <input type="email" id="email2" name="email2" placeholder="Confirm email" value="<?php getInputValue('email2') ?> required>
             </p>
 
             <p>
