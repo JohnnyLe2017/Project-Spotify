@@ -6,6 +6,13 @@
 
 	include("includes/handlers/register-handler.php");
 	include("includes/handlers/login-handler.php");
+
+	// Function for input value if it's been set.
+	function getInputValue($name) {
+		if(isset($_POST[$name])) {
+			echo $_POST[$name];
+		}
+	}
 ?>
 
 <!DOCTYPE html>
@@ -56,11 +63,11 @@
 							<?php echo $account->getError(Constants::$emailsDoNotMatch); ?>
 							<?php echo $account->getError(Constants::$emailInvalid); ?>
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email" value="<?php getInputValue('email') ?> required>
+                <input type="email" id="email" name="email" placeholder="Email" value="<?php getInputValue('email') ?>" required>
             </p>
             <p>
                 <label for="email2">Confirm email</label>
-                <input type="email" id="email2" name="email2" placeholder="Confirm email" value="<?php getInputValue('email2') ?> required>
+                <input type="email" id="email2" name="email2" placeholder="Confirm email" value="<?php getInputValue('email2') ?>" required>
             </p>
 
             <p>
