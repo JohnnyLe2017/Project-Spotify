@@ -1,6 +1,14 @@
 <?php
 
-echo "Hello World!!";
+    include("includes/config.php");
+
+    if(isset($_SESSION['userLoggedIn'])) {
+        $userLoggedIn = $_SESSION['userLoggedIn'];
+    }
+    else {
+        header("Location: register.php");
+    }
+
 
 ?>
 
@@ -27,6 +35,15 @@ echo "Hello World!!";
 </head>
 
 <body>
+
+    <div id="nowPlayingBarContainer">
+
+        <div id="nowPlayingBar">
+
+        </div>
+
+    </div>
+    
     <script src="js/script.js"></script>
 </body>
 
