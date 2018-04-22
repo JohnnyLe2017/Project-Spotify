@@ -8,7 +8,6 @@
 	include("includes/handlers/register-handler.php");
 	include("includes/handlers/login-handler.php");
 
-	// Function for input value if it's been set.
 	function getInputValue($name) {
 		if(isset($_POST[$name])) {
 			echo $_POST[$name];

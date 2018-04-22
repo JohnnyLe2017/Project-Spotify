@@ -10,7 +10,7 @@ echo "Hello World!!";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project Spotify</title>
+    <title>Welcome to Project Spotify!</title>
     <!--Import Font Awesome-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     <!--Import Font Poppins-->

@@ -1,29 +1,25 @@
 <?php
 
-// This page handles register form submission
-
-// Helper functions
-
-function sanitizeFormPassword($inputText){
-	$inputText = strip_tags($inputText); // disables HTML elements from being inputted
+function sanitizeFormPassword($inputText) {
+	$inputText = strip_tags($inputText);
 	return $inputText;
 }
 
-function sanitizeFormUsername($inputText){
-	$inputText = strip_tags($inputText); // disables HTML elements from being inputted
-	$inputText = str_replace(" ", "", $inputText); // Sanitizes username
-	return $inputText;
-}
-
-function sanitizeFormString($inputText){
+function sanitizeFormUsername($inputText) {
 	$inputText = strip_tags($inputText);
 	$inputText = str_replace(" ", "", $inputText);
-	$inputText = ucfirst(strtolower($inputText)); // Uppercases first name
 	return $inputText;
 }
 
-// Detects when SIGN UP button is pressed
+function sanitizeFormString($inputText) {
+	$inputText = strip_tags($inputText);
+	$inputText = str_replace(" ", "", $inputText);
+	$inputText = ucfirst(strtolower($inputText));
+	return $inputText;
+}
+
 if(isset($_POST['registerButton'])) {
+	//Register button was pressed
 	$username  = sanitizeFormUsername($_POST['username']);
 	$firstName = sanitizeFormString($_POST['firstName']);
 	$lastName  = sanitizeFormString($_POST['lastName']);
@@ -35,8 +31,10 @@ if(isset($_POST['registerButton'])) {
 	$wasSuccessful = $account->register($username, $firstName, $lastName, $email, $email2, $password, $password2);
 
 	if($wasSuccessful == true) {
+		$_SESSION['userLoggedIn'] = $username;
 		header("Location: index.php");
 	}
+
 }
 
 ?>
