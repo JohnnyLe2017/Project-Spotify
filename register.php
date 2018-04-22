@@ -22,7 +22,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Welcome to Project Spotify!</title>
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
 		<link href="css/register.css" rel="stylesheet" type="text/css" />
 </head>
 
