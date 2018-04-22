@@ -64,7 +64,7 @@
                 <label for="lastName">Last Name</label>
                 <input type="text" id="lastName" name="lastName" placeholder="Last Name" value="<?php getInputValue('lastName') ?>" required>
             </p>
-						
+
             <p>
 							<?php echo $account->getError(Constants::$emailsDoNotMatch); ?>
 							<?php echo $account->getError(Constants::$emailInvalid); ?>
