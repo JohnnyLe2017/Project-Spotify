@@ -1,11 +1,13 @@
 <?php
 	class Account {
 
+		private $con;
 		private $errorArray;
 
-		public function __construct() {
+		public function __construct($con) {
+			$this->con = $con;
 			$this->errorArray = array();
-		}
+			}
 
 		public function register($un, $fn, $ln, $em, $em2, $pw, $pw2) {
 			$this->validateUsername($un);
@@ -16,20 +18,29 @@
 
 			if(empty($this->errorArray) == true) {
 				//Insert into db
-				return true;
+				return $this->insertUserDetails($un, $fn, $ln, $em, $pw);
 			}
 			else {
 				return false;
 			}
 		}
 		// Checks if error exists in errorArray
-		public function getError() {
+		public function getError($error) {
 			if(!in_array($error, $this->errorArray)) {
 				$error = "";
 			}
 			return "<span class='errorMessage'>$error</span>";
 		}
 
+		private function insertUserDetails($un, $fn, $ln, $em, $pw) {
+			$encryptedPw = md5($pw);
+			$profilePic  = "assets/img/profile-pics/image1.png";
+			$date        = date("Y-m-d");
+			$result      = mysqli_query($this->con, "INSERT INTO users VALUES ('', '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')");
+
+			return $result;
+		}
+		
 		private function validateUsername($un) {
 
 			if(strlen($un) > 25 || strlen($un) < 5) {
