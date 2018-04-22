@@ -132,6 +132,23 @@
 			        </form>
 
 			    </div>
+
+				    <div id="loginText">
+					<h1>Music for everyone.</h1>
+					<h2>What's on Spotify?</h2>
+					<h3>Music</h3>
+					<p class="music">
+						There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.
+					</p>
+					<h3>Playlists</h3>
+					<p class="music">
+						You’ll find readymade playlists to match your mood, put together by music fans and experts.
+					</p>
+					<h3>New Releases</h3>
+					<p class="music">
+						Hear this week’s latest singles and albums, and check out what’s hot in the Top 50.
+					</p>
+
 			</div>
 		</div>
 		<script src="js/register.js"></script>
