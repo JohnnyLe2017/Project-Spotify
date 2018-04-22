@@ -41,6 +41,11 @@
 			                <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter password" required>
 			            </p>
 			            <button type="submit" name="loginButton">Log In</button>
+			            <div class="hasAccountText">
+			            	<span id="hideLogin">
+			            		Don't have an account yet? Signup here.
+			            	</span>
+			            </div>
 			        </form>
 
 
@@ -94,6 +99,13 @@
 			            </p>
 
 			            <button type="submit" name="registerButton">SIGN UP</button>
+
+			            <div class="hasAccountText">
+			            	<span id="hideRegister">
+			            		Already have an account? Log in here.
+			            	</span>
+			            </div>
+
 			        </form>
 
 			    </div>
