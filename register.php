@@ -31,6 +31,7 @@
         <form action="register.php" id="loginForm" method="POST">
             <h2>Login to your account</h2>
             <p>
+								<?php echo $account->getError(Constants::$loginFailed); ?>
                 <label for="loginUsername">Username</label>
                 <input type="text" id="loginUsername" name="loginUsername" placeholder="User Name" required>
             </p>
