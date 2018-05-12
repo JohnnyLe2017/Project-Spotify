@@ -10,13 +10,11 @@ else {
 
 ?>
 
-<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Project Spotify!</title>
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
+	<title>Welcome to Spotify!</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
@@ -24,15 +22,45 @@ else {
 	<div id="mainContainer">
 
 		<div id="topContainer">
-        <div id="navBarContainer">
+
+			<div id="navBarContainer">
 				<nav class="navBar">
 
 					<a href="index.php" class="logo">
-						<img src="assets/img/icons/logo.png" alt="Logo">
+						<img src="assets/images/icons/logo.png">
 					</a>
+
+
+					<div class="group">
+
+						<div class="navItem">
+							<a href="search.php" class="navItemLink">Search
+								<img src="assets/images/icons/search.png" class="icon" alt="Search">
+							</a>
+						</div>
+
+					</div>
+
+					<div class="group">
+						<div class="navItem">
+							<a href="browse.php" class="navItemLink">Browse</a>
+						</div>
+
+						<div class="navItem">
+							<a href="yourMusic.php" class="navItemLink">Your Music</a>
+						</div>
+
+						<div class="navItem">
+							<a href="profile.php" class="navItemLink">Johnny Le</a>
+						</div>
+					</div>
+
+
+
 
 				</nav>
 			</div>
+
 		</div>
 
 
@@ -70,27 +98,27 @@ else {
 						<div class="buttons">
 
 							<button class="controlButton shuffle" title="Shuffle button">
-								<img src="assets/img/icons/shuffle.png" alt="Shuffle">
+								<img src="assets/images/icons/shuffle.png" alt="Shuffle">
 							</button>
 
 							<button class="controlButton previous" title="Previous button">
-								<img src="assets/img/icons/previous.png" alt="Previous">
+								<img src="assets/images/icons/previous.png" alt="Previous">
 							</button>
 
 							<button class="controlButton play" title="Play button">
-								<img src="assets/img/icons/play.png" alt="Play">
+								<img src="assets/images/icons/play.png" alt="Play">
 							</button>
 
 							<button class="controlButton pause" title="Pause button" style="display: none;">
-								<img src="assets/img/icons/pause.png" alt="Pause">
+								<img src="assets/images/icons/pause.png" alt="Pause">
 							</button>
 
 							<button class="controlButton next" title="Next button">
-								<img src="assets/img/icons/next.png" alt="Next">
+								<img src="assets/images/icons/next.png" alt="Next">
 							</button>
 
 							<button class="controlButton repeat" title="Repeat button">
-								<img src="assets/img/icons/repeat.png" alt="Repeat">
+								<img src="assets/images/icons/repeat.png" alt="Repeat">
 							</button>
 
 						</div>
@@ -121,7 +149,7 @@ else {
 					<div class="volumeBar">
 
 						<button class="controlButton volume" title="Volume button">
-							<img src="assets/img/icons/volume.png" alt="Volume">
+							<img src="assets/images/icons/volume.png" alt="Volume">
 						</button>
 
 						<div class="progressBar">
@@ -142,7 +170,7 @@ else {
 
 	</div>
 
-	
+
 
 
 </body>
