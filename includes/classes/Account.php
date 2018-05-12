@@ -11,7 +11,7 @@ class Account {
 
 	public function login($un, $pw) {
 
-		$pw = md5($pw);
+		$pw = password_hash($pw, PASSWORD_BCRYPT, array('cost'=>12));
 
 		$query = mysqli_query($this->con, "SELECT * FROM users WHERE username='$un' AND password='$pw'");
 
