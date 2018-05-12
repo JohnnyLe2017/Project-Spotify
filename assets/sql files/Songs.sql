@@ -36,7 +36,7 @@ INSERT INTO `songs` (
 VALUES
   (
     NULL, 'CID - Bad For Me (ft. Sizzy Rocket)',
-    '1', '2', '1', '3:25', 'assets/music/selected02.mp3',
+    '2', '2', '1', '2:33', 'assets/music/selected02.mp3',
     '2', '0'
   )
 
@@ -49,7 +49,7 @@ INSERT INTO `songs` (
 VALUES
   (
     NULL, 'Gianni Blu - Right Amount Of Wrong (TRU Concept Remix)',
-    '1', '3', '1', '3:25', 'assets/music/selected03.mp3',
+    '3', '3', '1', '3:19', 'assets/music/selected03.mp3',
     '3', '0'
   )
 
@@ -61,7 +61,7 @@ INSERT INTO `songs` (
 )
 VALUES
   (
-    NULL, 'Leandro Da Silva - So Excited (Calippo Remix)',
-    '1', '4', '1', '3:25', 'assets/music/selected04.mp3',
+    NULL, 'Anto & Lyle M - With You',
+    '4', '4', '1', '2:42', 'assets/music/selected04.mp3',
     '4', '0'
   )
