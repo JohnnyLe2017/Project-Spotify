@@ -24,9 +24,15 @@ else {
 	<div id="mainContainer">
 
 		<div id="topContainer">
-            <div id="navBarContainer">
-            
-            </div>
+        <div id="navBarContainer">
+				<nav class="navBar">
+
+					<a href="index.php" class="logo">
+						<img src="assets/img/icons/logo.png" alt="Logo">
+					</a>
+
+				</nav>
+			</div>
 		</div>
 
 
