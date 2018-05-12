@@ -50,7 +50,7 @@ class Account {
 	}
 
 	private function insertUserDetails($un, $fn, $ln, $em, $pw) {
-		$encryptedPw = md5($pw);
+		$encryptedPw = password_hash($pw, PASSWORD_BCRYPT, array('cost'=>12));
 		$profilePic = "assets/images/profilepics/image1.png";
 		$date = date("Y-m-d");
 

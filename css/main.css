@@ -23,6 +23,11 @@ html, body {
 #nowPlayingRight {
     width: 30%;
     min-width: 180px;
+}
+
+#nowPlayingRight {
+    position: relative;
+    margin-top: 16px;
 } 
 
 #nowPlayingCenter {
