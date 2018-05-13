@@ -1,21 +1,37 @@
 <?php include("includes/header.php"); ?>
 
+<h1 class="pageHeadingBig">You Might Also Like</h1>
 
+<div class="gridViewContainer">
 
-					</div>
-				</div>
-		</div>
+	<?php
+		$albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND() LIMIT 10");
 
-
-		<div id="nowPlayingBarContainer">
-			<?php include("includes/nowPlayingBar.php");?>
-		</div>
-
-	</div>
+		while($row = mysqli_fetch_array($albumQuery)) {
 
 
 
 
-</body>
+			echo "<div class='gridViewItem'>
+					<a href='album.php?id=" . $row['id'] . "'>
+						<img src='" . $row['artworkPath'] . "'>
 
-</html>
+						<div class='gridViewInfo'>"
+							. $row['title'] .
+						"</div>
+					</a>
+
+				</div>";
+
+
+
+		}
+	?>
+
+</div>
+
+
+
+
+
+<?php include("includes/footer.php"); ?>
