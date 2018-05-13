@@ -1,30 +1,6 @@
-<?php
-include("includes/config.php");
+<?php include("includes/header.php"); ?>
 
-if(isset($_SESSION['userLoggedIn'])) {
-	$userLoggedIn = $_SESSION['userLoggedIn'];
-}
-else {
-	header("Location: register.php");
-}
 
-?>
-
-<html>
-<head>
-	<title>Welcome to Spotify!</title>
-
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-
-<body>
-
-	<div id="mainContainer">
-
-		<div id="topContainer">
-			<?php include("includes/navBarContainer.php");?>
-				<div id="mainViewContainer">
-					<div id="mainContent">
 
 					</div>
 				</div>
