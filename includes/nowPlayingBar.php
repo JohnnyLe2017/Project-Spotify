@@ -4,13 +4,29 @@ $songQuery = mysqli_query($con, "SELECT id FROM songs ORDER BY RAND() LIMIT 10")
 // Declare empty array
 $resultArray = array();
 
-// Push every item onto empty array 
+// Push every item onto empty array
 while($row = mysqli_fetch_array($songQuery)) {
 	array_push($resultArray, $row['id']);
 }
 
+// Built in PHP Function to convert objects into JSON
 $jsonArray = json_encode($resultArray);
 ?>
+
+<script>
+
+$(document).ready(function() {
+	currentPlaylist = <?php echo $jsonArray; ?>;
+	audioElement = new Audio();
+	setTrack(currentPlaylist[0], currentPlaylist, false);
+});
+
+
+function setTrack(trackId, newPlaylist, play) {
+
+}
+
+</script>
 
 <div id="nowPlayingBarContainer">
 

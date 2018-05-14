@@ -18,13 +18,17 @@ else {
 	<title>Welcome to Spotify!</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 	<script src="assets/js/script.js" type="text/javascript"></script>
 
 </head>
 
 <body>
 
-	
+
 
 	<div id="mainContainer">
 
