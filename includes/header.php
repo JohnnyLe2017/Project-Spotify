@@ -24,11 +24,7 @@ else {
 
 <body>
 
-	<script type="text/javascript">
-		var audioElement = new Audio();
-		audioElement.setTrack("assets/music/selected04.mp3");
-		audioElement.audio.play();
-	</script>
+	
 
 	<div id="mainContainer">
 
