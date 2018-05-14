@@ -1,5 +1,15 @@
 <?php
+$songQuery = mysqli_query($con, "SELECT id FROM songs ORDER BY RAND() LIMIT 10");
 
+// Declare empty array
+$resultArray = array();
+
+// Push every item onto empty array 
+while($row = mysqli_fetch_array($songQuery)) {
+	array_push($resultArray, $row['id']);
+}
+
+$jsonArray = json_encode($resultArray);
 ?>
 
 <div id="nowPlayingBarContainer">
