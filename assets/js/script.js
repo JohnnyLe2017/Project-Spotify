@@ -1,4 +1,7 @@
 
+const currentPlaylist = array();
+const audioElement;
+
 function Audio() {
   // Keeps track of Currently Playing Songs
   this.currentlyPlaying;
