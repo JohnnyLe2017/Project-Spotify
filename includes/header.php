@@ -18,9 +18,17 @@ else {
 	<title>Welcome to Spotify!</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="assets/js/script.js" type="text/javascript"></script>
+
 </head>
 
 <body>
+
+	<script type="text/javascript">
+		var audioElement = new Audio();
+		audioElement.setTrack("assets/music/selected04.mp3");
+		audioElement.audio.play();
+	</script>
 
 	<div id="mainContainer">
 
